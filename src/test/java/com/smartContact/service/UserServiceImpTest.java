@@ -14,13 +14,13 @@ class UserServiceImpTest {
     private UserServiceImp userServiceImp;
     @BeforeAll
     void setUp(){
-        User user=User.builder().name("hemraj").email("hemrajmalhi1234@gmail.com").about("Sr").password("root").role("java developer").id(3).build();
-        Mockito.when(userServiceImp.getUserNameByName("hemraj")).thenReturn(user);
+        User user=User.builder().name("stefany").email("stefany@gmail.com").about("MS").password("root").role("java developer").id(3).build();
+        Mockito.when(userServiceImp.getUserNameByName("stefany")).thenReturn(user);
     }
 
     @Test
     public void WhenValidDepartmentName_ThenUserShouldBeFound(){
-        String name="hemraj";
+        String name="stefany";
         User found=userServiceImp.getUserNameByName(name);
 
         assertEquals(name,found.getName());
